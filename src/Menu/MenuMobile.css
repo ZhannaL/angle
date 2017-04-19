@@ -1,0 +1,55 @@
+.buttonMenu.ui.button , .mobileMenu{
+	background-color: #33cccc;
+}
+
+.menu_mobile {
+	width: 100%;
+}
+.menu_mobile a{
+	text-decoration: none;
+	color: white;
+}
+.menu_mobile a:hover{
+	color: lightblue;
+}
+.pointTo{
+	background-color: #4d4d4d;
+	list-style: none;
+	padding: 5px;
+}
+
+#nav_mobile {
+    border:1px solid grey;
+	list-style: none;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	background-color: #3d3d3d;
+}
+
+#nav_mobile > li {
+	padding: 5px;
+	border: 1px solid grey;
+	background-color: #3d3d3d;
+}
+
+#nav_mobile ul{
+	padding-left: 2px;
+}
+
+.menu_hidden{
+	overflow: hidden;
+	height: 0;
+}
+
+.menu_visible{
+	overflow: visible;
+	height: auto;
+	position:absolute;
+	z-index: 2;
+
+}
+/*.button_menu:hover .menu_min{
+	overflow: visible;
+	height: auto;
+}*/

@@ -1,0 +1,43 @@
+
+.menu a{
+	text-decoration: none;
+	color: white;
+	padding-left: 20px;
+}
+.menu a:hover{
+	color: lightblue;
+}
+.point{
+	padding:  16px 20px;
+	background-color: #4d4d4d;
+}
+#nav > li {
+	padding: 16px 12px;
+	border: 1px solid grey;
+	background-color: #3d3d3d;
+}
+
+#nav li:hover {
+ 	background-color: #666;
+}
+
+#nav {
+    border:1px solid grey;
+	width: 100%;
+	font-size: 20px;
+	list-style:none;
+	padding: 0;
+	max-height: 700px;
+	margin: 0;
+}
+
+#nav ul{
+	max-height: 0;
+	overflow: hidden;
+	display: block;
+	padding: 0;
+}
+#nav:hover ul{
+	max-height: 500px;
+    transition: max-height 0.6s ease-in;
+}
