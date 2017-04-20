@@ -7,10 +7,10 @@ import { Button, Icon  } from 'semantic-ui-react'
 
 
 const Buy = () => (
-    <Button fluid compact primary> <Icon name='shop' />В корзину</Button>
+    <Button  compact primary> <Icon name='shop' />В корзину</Button>
 )
 const Order = () => (
-    <Button fluid compact secondary> <Icon name='teletype' />  Заказать</Button>
+    <Button  compact secondary> <Icon name='teletype' />  Заказать</Button>
 )
 
 
@@ -63,7 +63,7 @@ class Acute extends Component {
 										<Table.Cell>{table.angle}</Table.Cell>
 										<Table.Cell>{table.size}</Table.Cell>
 										<Table.Cell>{table.count}</Table.Cell>
-										<Table.Cell>{(table.count==0) ? Order() : Buy()}</Table.Cell>
+										<Table.Cell textAlign='right'>{(table.count==0) ? Order() : Buy()}</Table.Cell>
 									</Table.Row>
 								)
 	                		})}
