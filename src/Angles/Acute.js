@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Table from './Table.js';
 import { Table } from 'semantic-ui-react'
 import './Acute.css';
 
@@ -7,10 +6,10 @@ import { Button, Icon  } from 'semantic-ui-react'
 
 
 const Buy = () => (
-    <Button  compact primary> <Icon name='shop' />В корзину</Button>
+    <Button compact primary> <Icon name='shop' />В корзину</Button>
 )
 const Order = () => (
-    <Button  compact secondary> <Icon name='teletype' />  Заказать</Button>
+    <Button compact secondary> <Icon name='teletype' />  Заказать</Button>
 )
 
 
