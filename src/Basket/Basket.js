@@ -9,7 +9,9 @@ class Basket extends Component {
 
 				</div>
 				<div className="">
-					
+					<div className="example">
+						<p>sometext for example</p>
+					</div>
 				</div>
 			</div>
 		);
