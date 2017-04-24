@@ -7,7 +7,8 @@ class Basket extends Component {
 			<div className="basket">
 				<p>sometext </p>
 				<sup>sometext for conflict</sup>
-				<a>sometext for example</a>
+				<p>sometext for example and chanches</p>
+				<b>sometext for example and conflict</b>
 				<div className="">
 					<div className="example">
 						<p>sometext for example</p>
