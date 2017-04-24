@@ -25,7 +25,7 @@ class MenuMin extends Component {
 	    return (
 			<div className ="mobileMenu">
 				<div className="button_menu"> <ButtonMenu onClick={this.toggleVisibility}></ButtonMenu>  </div>
-				<div className={'menu_mobile ' + (this.state.visible ? 'menu_visible' : 'menu_hidden')}>
+				<div className={`menu_mobile ${this.state.visible ? 'menu_visible' : 'menu_hidden'}`}>
 					<ul id="nav_mobile">
 						<li> <a href="index.html">Главная </a></li>
 						<li ><a href="index0.html">Продукция</a></li>
