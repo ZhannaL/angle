@@ -1,15 +1,38 @@
 import React, { Component } from 'react';
 import { Table } from 'semantic-ui-react'
+import { Button, Icon } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { addGood } from './AcuteActions'
 import './Acute.css';
 
-import { Button, Icon  } from 'semantic-ui-react'
 
+const mapStateToProps = state => {
+	return {
+
+	}
+}
+
+const mapDispatchToProps = {
+	addGood
+}
 
 const Buy = () => (
-    <Button compact primary> <Icon name='shop' />В корзину</Button>
+    <Button
+		compact
+		primary
+		onClick={()=>this.addGood()}
+		>
+		<Icon name='shop'/>
+		В корзину
+	</Button>
 )
 const Order = () => (
-    <Button compact secondary> <Icon name='teletype' />  Заказать</Button>
+    <Button
+		compact
+		secondary>
+		<Icon name='teletype'/>
+		Заказать
+	</Button>
 )
 
 
@@ -74,4 +97,7 @@ class Acute extends Component {
 	}
 }
 
-export default Acute;
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Acute);

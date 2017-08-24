@@ -1,0 +1,27 @@
+
+.menuSidebardiv{
+	height: 10%;
+
+}
+.menuSidebarPushable{
+	overflow-y: visible!important;
+	overflow-x: visible!important;
+	border: none!important;
+	border-radius: 0!important;
+}
+#menuSidebar{
+	height: 100%;
+	overflow-y: visible!important;
+	overflow-x: visible!important;
+}
+
+.SegmentPusher{
+	margin: 5px;
+}
+
+.MenuSideBar{
+	padding-top: 5px;
+	padding-bottom:  5px;
+	border: none!important;
+	border-radius: 0!important;
+}

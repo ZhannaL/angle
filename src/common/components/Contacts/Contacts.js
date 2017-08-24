@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Contacts.css';
+// import SimpleExample from './Map.js'
 
 class Contacts extends Component {
+
+
 	render() {
 		return (
 			<div className="contacts">
@@ -27,6 +30,10 @@ class Contacts extends Component {
 				<br/>
 				<p><b>Как до нас добраться:</b></p>
 				<iframe src="https://api-maps.yandex.ru/frame/v1/-/C6aK4N0A" width="560" height="400" frameborder="0"></iframe>
+
+				{/* <div id="mapid">
+					<SimpleExample/>
+				</div> */}
 			</div>
 		);
 	}
