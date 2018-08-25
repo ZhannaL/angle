@@ -1,0 +1,92 @@
+@import "../color.scss";
+.top_logo{
+	// background-color: $COLOR_6+0C ;
+    // background-color: transparentize($COLOR_6, 0.4);
+
+    color: black;
+  // background: repeating-linear-gradient(
+  //   45deg,
+  //   transparent,
+  //   transparent 10px,
+  //   #ccc 10px,
+  //   #ccc 20px
+  // ),
+  // linear-gradient(
+  //   to bottom,
+  //   #eee,
+  //   #999
+  // );
+
+  background:
+linear-gradient(135deg, $color-1 22px, $color-2 22px, $color-2 24px, transparent 24px, transparent 67px, $color-2 67px, $color-2 69px, transparent 69px),
+linear-gradient(225deg, $color-1 22px, $color-2 22px, $color-2 24px, transparent 24px, transparent 67px, $color-2 67px, $color-2 69px, transparent 69px)0 64px;
+background-color:$color-1;
+background-size: 64px 128px;
+// background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+
+// background-color: $color-1;
+// background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+// linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+// linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+// linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+// background-size: 13px, 29px, 37px, 53px;
+
+
+	padding: 20px;
+	padding-left: 100px;
+	padding-right: 50px;
+	/*min-width: calc(100vh + 150px);*/
+
+	/* background-color: #8FB52D; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.logo {
+	color: $COLOR_1 ;
+   font: bold 17px Arial;
+}
+.desc{
+
+}
+.logo_pic {
+	margin-top: 10px;
+	display: block;
+	background-image: url("/assets/logo22.png") ;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 90px;
+	padding: 0;
+	transition: all 0.6s;
+}
+.logo_pic:hover{
+   // background-image: url("/assets/logo2_2.png");
+   opacity: 0.7;
+   transform: scale(1.2);
+}
+.tel {
+	margin: auto;
+	text-align: center;
+	font:  22px Arial;
+
+}
+.tel .tel_logo{
+	color: $COLOR_1 ;
+	text-shadow: 0.5px 0px black;
+	font: bold 22px Arial;
+
+}
+.top_logo .basket_logo {
+	display: block;
+	padding-right: 8px;
+	margin-left: auto;
+	right: 0;
+	font: bold 14pt sans-serif;
+	color: $COLOR_1;
+	transition: all .8s;
+}
+.top_logo .basket_logo:hover{
+	color: darken($COLOR_6, 0.35);
+	transform: scale(1.1);
+}

@@ -1,25 +1,70 @@
 import React, { Component } from 'react';
-import './Menu.css';
+import { Menu, Dropdown, Icon } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 
-class Menu extends Component {
+import './Menu.scss';
+import selectСontent from './MenuActions';
+import {
+  Router,
+  Route,
+  Link,
+} from 'react-router-dom';
+
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = {
+  selectСontent,
+};
+class MenuDiv extends Component {
+  selectСontent(page) {
+    this.props.selectСontent(page);
+  }
   render() {
     return (
-		<div className="menu" >
-			<ul id="nav">
-				<li> <a href="index.html">Главная </a></li>
-				<li className="sub"><a href="index0.html">Продукция</a></li>
-					<ul id="nav2">
-						<li className="point"> <a href=" ">Острый угол<b>ОК</b></a></li>
-						<li className="point"><a href=" ">Прямой угол<b>ОК</b></a></li>
-						<li className="point"><a href=" ">Тупой угол<b>ОК</b></a></li>
-						<li className="point"><a href=" ">Развернутый угол<b>ОК</b></a></li>
-					</ul>
-				<li><a href=" ">Контакты</a></li>
-				<li><a href=" ">Корзина</a></li>
-			</ul>
-  	  </div>
+      <Menu
+        widths={this.props.widths}
+        icon="labeled"
+        // color="grey"
+        inverted
+        className="MenuSideBar"
+      >
+        <Menu.Item header href="/" onClick={() => this.selectСontent('home')}>
+          <Icon name="home" size="large" />
+          Главная
+        </Menu.Item>
+        <Dropdown
+          deburr
+          item
+          text="Продукция"
+        >
+          <Dropdown.Menu className="dropDown" >
+            <Dropdown.Item href="/categories" text="Все виды" onClick={() => this.selectСontent('categories')} />
+            <Dropdown.Item href="/acute" text="Острый угол" onClick={() => this.selectСontent('acute')} />
+            <Dropdown.Item text="Прямой угол" onClick={() => this.selectСontent('contacts')} />
+            <Dropdown.Item text="Тупой угол" onClick={() => this.selectСontent('obtuse')} />
+            <Dropdown.Item text="Развернутый угол" onClick={() => this.selectСontent('deployed')} />
+          </Dropdown.Menu>
+        </Dropdown>
+        <Menu.Item href="/contacts" onClick={() => this.selectСontent('contacts')}>
+          <Icon name="phone" size="large" />
+          Контакты
+        </Menu.Item>
+        <Menu.Item href="/contacts" onClick={() => this.selectСontent('contacts')}>
+          <Icon name="pencil" size="large" />
+          Отзывы
+        </Menu.Item>
+        <Menu.Item href="/basket" onClick={() => this.selectСontent('basket')}>
+          <Icon name="shop" size="large" />
+          Корзина(0)
+        </Menu.Item>
+      </Menu>
     );
   }
 }
 
-export default Menu;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MenuDiv);

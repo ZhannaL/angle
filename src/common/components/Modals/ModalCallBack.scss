@@ -1,0 +1,19 @@
+@import "../color.scss";
+.callBack a {
+	margin-top: 10px;
+    color: lighten($COLOR_1, 5%)!important;
+    // color: yellow;
+
+}
+.callBack a:hover{
+    color: darken($COLOR_6, 0.35)!important;
+}
+
+.ui.modal.transition.visible.active{
+    margin: auto!important;
+
+}
+.visible.transition{
+    display: grid!important;
+    margin: auto;
+}

@@ -1,0 +1,37 @@
+
+@import "../color.scss";
+
+.dropDown.ui.menu.dropdown.item.menu{
+	/* min-width: calc(200%)!important;
+	background-color: rgb(210, 248, 112)!important; */
+}
+.ui.menu{
+	margin: 0;
+}
+.ui.labeled.icon.menu .item{
+	display: flex;
+	flex-direction: row;
+}
+
+.MenuSideBar.ui.labeled.icon.menu .item>.icon:not(.dropdown){
+	margin: 5px 0!important
+}
+
+.MenuSideBar.ui.item.menu, .ui.item.menu .item{
+    background-color: lighten($COLOR_2, 10%);
+	width: auto;
+}
+ .ui.inverted.menu .link.item:hover,
+.ui.inverted.menu a.item:hover, .ui.link.inverted.menu .item:hover{
+    background-color: darken($COLOR_6, 0.35);
+    opacity: 0.8;
+    // color: white;
+}
+//  .ui.item.menu .dropdown .menu .item {
+//  white-space: normal!important;
+//  width: auto;
+// }
+.dropDown > * {
+ white-space: normal!important;
+ width: auto;
+}

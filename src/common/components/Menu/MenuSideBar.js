@@ -4,6 +4,12 @@ import './MenuSideBar.css';
 import { connect } from 'react-redux'
 import { selectСontent } from './MenuActions'
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
 const mapStateToProps = state => {
 	return {
 
@@ -21,31 +27,44 @@ class MenuSideBar extends Component {
 	render() {
 		return (
 			<Menu
+				 widths={4}
+				icon='labeled'
 				inverted
 				fluid
-				vertical
-				size='massive'
+				horizontal
 				className="MenuSideBar">
-
-				<Menu.Item onClick={()=>this.selectСontent('home')}>
-	                 Главная
+				<Menu.Item header>
+					 <Link to={`/`}>
+					 <Icon name='home' size='large' />
+						Главная
+					 </Link>
                </Menu.Item>
-				<Dropdown onClick={()=>this.selectСontent('categories')} item text='Продукция'>
-					<Dropdown.Menu>
-						<Dropdown.Item  text='Острый угол' onClick={()=>this.selectСontent('acute')}/>
+				<Dropdown
+					selection
+					onClick={()=>this.selectСontent('categories')}
+					item
+					text='Продукция'>
+					<Dropdown.Menu >
+						<Dropdown.Item  href={`/categories`} text='Все виды' onClick={()=>this.selectСontent('categories')}/>
+						<Dropdown.Item  href={`/acute`} text='Острый угол' onClick={()=>this.selectСontent('acute')}/>
 						<Dropdown.Item  text='Прямой угол' onClick={()=>this.selectСontent('contacts')}/>
 						<Dropdown.Item  text='Тупой угол' onClick={()=>this.selectСontent('obtuse')}/>
 						<Dropdown.Item  text='Развернутый угол' onClick={()=>this.selectСontent('deployed')}/>
 					</Dropdown.Menu>
 				</Dropdown>
-				<Menu.Item onClick={()=>this.selectСontent('contacts')}>
-					 Контакты
-			   </Menu.Item>
-			   <Menu.Item onClick={()=>this.selectСontent('basket')}>
-				 	Корзина
-   		   		</Menu.Item>
 				<Menu.Item >
-				</Menu.Item>
+					<Link to={`/contacts`}>
+						<Icon name='phone' size='large' />
+		 				Контакты
+	   				</Link>
+			   </Menu.Item>
+			   <Menu.Item >
+				   <Link to={`/basket`}>
+					<Icon name='shop' size='large' />
+					   Корзина(0)
+				   </Link>
+   		   		</Menu.Item>
+
 			</Menu>
 		)
 	}
