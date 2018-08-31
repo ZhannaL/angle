@@ -29,3 +29,7 @@
     border-color: darken($COLOR_6, 10%)!important;
 
 }
+.basket_tab.ui.table tfoot tr:first-child>th:only-child{
+    background-color: transparentize(lighten($COLOR_4, 10%), 0.2);
+    border-color: darken($COLOR_6, 10%)!important;
+}

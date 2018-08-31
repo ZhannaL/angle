@@ -1,30 +1,55 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Table, Icon, Menu } from 'semantic-ui-react';
 import './Basket.scss';
 
 const options = [
   [
-    'today',
+    '1today',
     'today1',
     'today2',
     'Today3',
   ], [
-    'this week',
+    '2this week',
     'this week1',
     'this week2',
     'This Week3',
   ], [
-    'this month',
+    '3this month',
     'this month1',
     'this month2',
     'This Month3',
   ], [
-    'this month',
+    '4this month',
     'this month1',
     'this month2',
     'This Month3',
   ], [
-    'this month',
+    '5this month',
+    'this month1',
+    'this month2',
+    'This Month3',
+  ], [
+    '6today',
+    'today1',
+    'today2',
+    'Today3',
+  ], [
+    '7this week',
+    'this week1',
+    'this week2',
+    'This Week3',
+  ], [
+    '8this month',
+    'this month1',
+    'this month2',
+    'This Month3',
+  ], [
+    '9this month',
+    'this month1',
+    'this month2',
+    'This Month3',
+  ], [
+    '10this month',
     'this month1',
     'this month2',
     'This Month3',
@@ -33,7 +58,7 @@ const options = [
 
 const Basket = () => (
   <Table singleLine inverted className="basket_tab">
-    <Table.Header>
+    <Table.Header >
       <Table.Row className="basket_header" >
         <Table.HeaderCell>Name</Table.HeaderCell>
         <Table.HeaderCell>Registration Date</Table.HeaderCell>
@@ -49,6 +74,24 @@ const Basket = () => (
         </Table.Row>
       ))}
     </Table.Body>
+    <Table.Footer>
+      <Table.Row >
+        <Table.HeaderCell colSpan="4">
+          <Menu floated="right" pagination>
+            <Menu.Item as="a" icon>
+              <Icon name="chevron left" />
+            </Menu.Item>
+            <Menu.Item as="a">1</Menu.Item>
+            <Menu.Item as="a">2</Menu.Item>
+            <Menu.Item as="a">3</Menu.Item>
+            <Menu.Item as="a">4</Menu.Item>
+            <Menu.Item as="a" icon>
+              <Icon name="chevron right" />
+            </Menu.Item>
+          </Menu>
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Footer>
   </Table>
 );
 

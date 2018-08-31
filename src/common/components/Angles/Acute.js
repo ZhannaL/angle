@@ -2,7 +2,7 @@ import React from 'react';
 import { Table, Button, Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { addGood } from './AcuteActions';
-import './Acute.css';
+import './Acute.scss';
 
 
 const mapStateToProps = state => ({
@@ -64,7 +64,7 @@ const Acute = () => (
     <div className="prodAcute" >
       <div className="img"> <img src="/assets/jcnh2.png" alt="альтернативный текст" /> </div>
       <div className="descr" >
-        <p><b>Острый уголОК</b></p>
+        <p className="propName"><b>Острый уголОК</b></p>
         <br />
         <p>Станет помощником в любом деле. Способна помочь в любом месте в любой ситуации.
           Осталось только выбрать материал

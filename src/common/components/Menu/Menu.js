@@ -51,7 +51,7 @@ class MenuDiv extends Component {
           <Icon name="phone" size="large" />
           Контакты
         </Menu.Item>
-        <Menu.Item href="/contacts" onClick={() => this.selectСontent('contacts')}>
+        <Menu.Item href="/review" onClick={() => this.selectСontent('review')}>
           <Icon name="pencil" size="large" />
           Отзывы
         </Menu.Item>

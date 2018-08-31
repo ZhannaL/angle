@@ -5,7 +5,7 @@ import './App.scss';
 
 import Logo from '../common/components/Logo/Logo';
 // import MenuMobile from '../common/components/Menu/MenuMobile.js';
-import Content from '../common/components/Content/Content';
+// import Content from '../common/components/Content/Content';
 // import MenuSideBar from '../common/components/Menu/MenuSideBar.js';
 import MenuDiv from '../common/components/Menu/Menu';
 import Footer from '../common/components/Footer/Footer';
@@ -14,6 +14,7 @@ import Home from '../common/components/Home/Home';
 import Categories from '../common/components/Products/Categories';
 import Acute from '../common/components/Angles/Acute';
 import Contacts from '../common/components/Contacts/Contacts';
+import Review from '../common/components/Review/Review';
 import Basket from '../common/components/Basket/Basket';
 import ScrollEvent from '../common/components/ScrollEvent/ScrollEvent';
 import { setScroll } from './AppAction';
@@ -88,6 +89,7 @@ id="menuSidebar">
                     <Route path="/categories" component={Categories} />
                     <Route path="/acute" component={Acute} />
                     <Route path="/contacts" component={Contacts} />
+                    <Route path="/review" component={Review} />
                     <Route path="/basket" component={Basket} />
                   </Switch>
                 </div>

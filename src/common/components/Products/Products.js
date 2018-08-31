@@ -5,9 +5,9 @@ import './Products.scss';
 import selectСontent from '../Menu/MenuActions';
 
 
-// const mapStateToProps = state => ({
-//
-// });
+const mapStateToProps = state => ({
+
+});
 
 const mapDispatchToProps = {
   selectСontent,
@@ -35,5 +35,6 @@ class Products extends Component {
 }
 
 export default connect(
-  // mapStateToProps,
-  mapDispatchToProps)(Products);
+  mapStateToProps,
+  mapDispatchToProps,
+)(Products);

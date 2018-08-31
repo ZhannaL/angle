@@ -1,0 +1,11 @@
+@import '../color';
+
+.imgbord {
+  border: 30px solid #40c4c8;
+  border-image: url('/assets/bord3.png')
+    100 /                    /* slice */
+    36px 28px 18px 8px /    /* width */
+    18px 14px 9px 4px       /* outset */
+    round;                  /* repeat */;
+
+}
