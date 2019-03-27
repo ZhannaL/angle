@@ -1,97 +1,64 @@
-@import "../common/components/color.scss";
+@import '../common/components/color';
+
 * {
   margin: 0;
   padding: 0;
 }
-*, :after, :before{
-	box-sizing: border-box;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
-/* .App {
-  text-align: center;
-  height: 100%;
+
+body,
+html {
+  height: initial;
+}
+
+body {
   position: relative;
-} */
-
-body, html {
-    height: initial;
 }
 
 body {
-position: relative;
-}
-
-body {
-	/* background:
-		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
-		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
-		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
-		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
-		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
-		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
-		linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
-	background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%; */
-	/* background-color: #B0E0E6; */
-
-}
-a:hover{
-	cursor: pointer;
-}
-.segmentcontent{
-    padding: 50px;
-    /* background-color:  rgba(255, 255, 255, 0.1); */
-    min-height: calc(100vh - 340px);
-    font: italic 16px/2 'Trebuchet MS', Verdana, sans-serif;
-
-    color: black;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 20px,
-        #ccc 10px,
-        #ccc 20px
-      ),
-      linear-gradient(
-        to bottom,
-        #eee,
-        #999
-      );
-      background-image: url("https://www.transparenttextures.com/patterns/type.png");
-}
-/* #segment{
-
-	background-color:  rgba(255, 255, 255, 0.8);
-	padding-top: 30px;
-	line-height: 1.1;
-
-}
-.ui.segment.menuSidebarPushable{
-	background-color:  rgba(255, 255, 255, 0);
-	min-height: calc(100vh - 330px);
-
-} */
-.footer{
-	/* padding-top: 0.7rem!important; */
-	/* padding-bottom: 0!important; */
-}
-body >#root{
-  vertical-align: top;
 
 }
 
-
-.ui.grid>.row{
-	padding: 0
+a:hover {
+  cursor: pointer;
 }
-/* .footer.ui.grid>*{
-	padding: 0!important
-} */
-/* .ui.grid>*{
-	padding: 0!important
-} */
 
+.segmentcontent {
+  font: italic 16px/2 'Trebuchet MS', Verdana, sans-serif;
+  padding: 50px;
+  /* background-color:  rgba(255, 255, 255, 0.1); */
+  min-height: calc(100vh - 340px);
 
-@media screen and (min-width: 990px){
-    .segmentcontent .forMobile{
-        min-height: calc(100vh - 470px);
-    }
+  color: black;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    #ccc 10px,
+    rgb(212, 17, 17) 20px),
+    linear-gradient(
+      to bottom,
+      #eee,
+      rgb(211, 35, 35));
+  background-image: url('https://www.transparenttextures.com/patterns/type.png');
+}
+
+.footer {
+  /* padding-top: 0.7rem!important; */
+  /* padding-bottom: 0!important; */
+}
+
+.ui.grid>.row {
+  padding: 0;
+}
+
+@media screen and (min-width: 990px) {
+  .segmentcontent .forMobile {
+    min-height: calc(100vh - 470px);
+  }
 }

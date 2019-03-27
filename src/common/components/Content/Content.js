@@ -25,9 +25,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const Content = () => {
-  const Page = pages[this.props.content] || Home;
-  console.log('Content=', pages[this.props.content]);
+const Content = (props) => {
+  const { content } = props;
+  const Page = pages[content] || Home;
+  console.log('Content=', pages[content]);
   return (
     <div>
       <Page />

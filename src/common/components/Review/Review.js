@@ -27,8 +27,10 @@ const Review = () => (
       </Comment.Content>
     </Comment>
     <Comment>
-      <div >
-        <img className="imgbord" src="/assets/jcnh2.png" alt="альтернативный текст" />
+      <div className="container">
+        <img className="imgbord" src="/assets/diamond.png" alt="альтернативный текст" />
+        <img className="overlay" src="/assets/qwe3.png" alt="альтернативный текст" />
+        {/* <img className="imgbord2" src="/assets/qwe.png" alt="альтернативный текст" /> */}
       </div>
     </Comment>
     <Comment>

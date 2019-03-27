@@ -3,12 +3,12 @@ import { Menu, Dropdown, Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 import './Menu.scss';
+// import {
+//   Router,
+//   Route,
+//   Link,
+// } from 'react-router-dom';
 import selectСontent from './MenuActions';
-import {
-  Router,
-  Route,
-  Link,
-} from 'react-router-dom';
 
 const mapStateToProps = state => ({
 
@@ -19,12 +19,15 @@ const mapDispatchToProps = {
 };
 class MenuDiv extends Component {
   selectСontent(page) {
-    this.props.selectСontent(page);
+    const { selectСontent: selectСontentProps } = this.props;
+    selectСontentProps(page);
   }
+
   render() {
+    const { widths } = this.props;
     return (
       <Menu
-        widths={this.props.widths}
+        widths={widths}
         icon="labeled"
         // color="grey"
         inverted
@@ -39,7 +42,7 @@ class MenuDiv extends Component {
           item
           text="Продукция"
         >
-          <Dropdown.Menu className="dropDown" >
+          <Dropdown.Menu className="dropDown">
             <Dropdown.Item href="/categories" text="Все виды" onClick={() => this.selectСontent('categories')} />
             <Dropdown.Item href="/acute" text="Острый угол" onClick={() => this.selectСontent('acute')} />
             <Dropdown.Item text="Прямой угол" onClick={() => this.selectСontent('contacts')} />

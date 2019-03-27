@@ -1,13 +1,19 @@
 import React from 'react';
-import { Button, Header, Icon, Modal, Form } from 'semantic-ui-react';
+import {
+  Button, Header, Icon, Modal, Form,
+} from 'semantic-ui-react';
 import './ModalCallBack.scss';
 
 const ModalCallBack = () => (
   <Modal
-    trigger={<div className="callBack"><a>
-      <Icon name="phone" />Заказать обратный звонок
-                                       </a>
-             </div>}
+    trigger={(
+      <div className="callBack">
+        <a href>
+          <Icon name="phone" />
+            Заказать обратный звонок
+        </a>
+      </div>
+)}
     closeIcon
   >
     <Header icon="phone" content="Обратный звонок?" />
@@ -27,7 +33,8 @@ const ModalCallBack = () => (
     </Modal.Content>
     <Modal.Actions>
       <Button color="green">
-        <Icon name="checkmark" /> Да!
+        <Icon name="checkmark" />
+        Да!
       </Button>
     </Modal.Actions>
   </Modal>

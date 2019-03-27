@@ -58,8 +58,8 @@ const options = [
 
 const Basket = () => (
   <Table singleLine inverted className="basket_tab">
-    <Table.Header >
-      <Table.Row className="basket_header" >
+    <Table.Header>
+      <Table.Row className="basket_header">
         <Table.HeaderCell>Name</Table.HeaderCell>
         <Table.HeaderCell>Registration Date</Table.HeaderCell>
         <Table.HeaderCell>E-mail address</Table.HeaderCell>
@@ -68,14 +68,15 @@ const Basket = () => (
     </Table.Header>
     <Table.Body>
       {options.map(value => (
-        <Table.Row> {value.map(index => (
-          <Table.Cell >{index}</Table.Cell>
-        ))}
+        <Table.Row>
+          {value.map(index => (
+            <Table.Cell>{index}</Table.Cell>
+          ))}
         </Table.Row>
       ))}
     </Table.Body>
     <Table.Footer>
-      <Table.Row >
+      <Table.Row>
         <Table.HeaderCell colSpan="4">
           <Menu floated="right" pagination>
             <Menu.Item as="a" icon>

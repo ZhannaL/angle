@@ -1,11 +1,44 @@
 @import '../color';
 
-.imgbord {
-  border: 30px solid #40c4c8;
-  border-image: url('/assets/bord3.png')
-    100 /                    /* slice */
-    36px 28px 18px 8px /    /* width */
-    18px 14px 9px 4px       /* outset */
-    round;                  /* repeat */;
 
+.container {
+  position: relative;
+  // width: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.imgbord {
+  display: block;
+  // height: auto;
+  // width: 100%;
+  width: 150px;
+  height: 150px;
+
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.imgbord2 {
+  background-color: transparentize($COLOR_6, 0.5);
 }

@@ -5,10 +5,6 @@ import { addGood } from './AcuteActions';
 import './Acute.scss';
 
 
-const mapStateToProps = state => ({
-
-});
-
 const mapDispatchToProps = {
   addGood,
 };
@@ -17,7 +13,7 @@ const Buy = () => (
   <Button
     compact
     primary
-    onClick={() => this.addGood()}
+    onClick={() => addGood()}
   >
     <Icon name="shop" />
       В корзину
@@ -61,16 +57,29 @@ const acutes = [
 ];
 const Acute = () => (
   <div className="Acute">
-    <div className="prodAcute" >
-      <div className="img"> <img src="/assets/jcnh2.png" alt="альтернативный текст" /> </div>
-      <div className="descr" >
+    <div className="prodAcute">
+      <div className="img">
+        <img src="/assets/jcnh2.png" alt="альтернативный текст" />
+      </div>
+      <div className="descr">
         <p className="propName"><b>Острый уголОК</b></p>
         <br />
-        <p>Станет помощником в любом деле. Способна помочь в любом месте в любой ситуации.
+        <p>
+Станет помощником в любом деле. Способна помочь в любом месте в любой ситуации.
           Осталось только выбрать материал
         </p>
-        <p>Острый уголок варьируется от 1<sup>о</sup> до 89<sup>о</sup> с шагом в 1 градус,
-        т.е. возможен вариант в 2<sup>о</sup>, 18<sup>о</sup> или 73<sup>о</sup>
+        <p>
+Острый уголок варьируется от 1
+          <sup>о</sup>
+до 89
+          <sup>о</sup>
+с шагом в 1 градус,
+        т.е. возможен вариант в 2
+          <sup>о</sup>
+, 18
+          <sup>о</sup>
+или 73
+          <sup>о</sup>
         </p>
         <p>Материал для уголков также различен и удовлетворит любой запрос</p>
       </div>
@@ -82,7 +91,7 @@ const Acute = () => (
       <Table basic="very" compact>
         <Table.Body>
           {acutes.map(table => (
-            <Table.Row >
+            <Table.Row>
               <Table.Cell><img src={table.img} alt="альтернативный текст" /></Table.Cell>
               <Table.Cell>{table.descrip}</Table.Cell>
               <Table.Cell>{table.angle}</Table.Cell>
@@ -90,7 +99,7 @@ const Acute = () => (
               <Table.Cell>{table.count}</Table.Cell>
               <Table.Cell textAlign="right">{(table.count === 0) ? Order() : Buy()}</Table.Cell>
             </Table.Row>
-))}
+          ))}
         </Table.Body>
       </Table>
     </div>
@@ -98,6 +107,6 @@ const Acute = () => (
 );
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(Acute);
